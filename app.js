@@ -1,17 +1,13 @@
-const startBtn = document.getElementById('enterBtn');
+const startBtn = document.getElementById('startBtn');
 const startScreen = document.getElementById('startScreen');
 const mapDiv = document.getElementById('map');
-const closeBtn = document.getElementById('closeBtn');
 
-// Start button
+// Start button click
 startBtn.addEventListener('click', ()=>{
     startScreen.style.display='none';
     mapDiv.style.display='block';
     initMap();
 });
-
-// Close modal
-closeBtn.addEventListener('click', hideModal);
 
 // Map initialization
 function initMap(){
@@ -23,10 +19,10 @@ function initMap(){
     // Add all hotspots
     hotspots.forEach(loc=>{
         const marker = L.circleMarker([loc.lat, loc.lng], {
-            radius:10, color:'#0ff', fillColor:'#0ff', fillOpacity:0.6, weight:2
+            radius:8, color:'#0ff', fillColor:'#0ff', fillOpacity:0.6, weight:2
         }).addTo(map);
         marker.bindTooltip(loc.concept,{permanent:false, direction:"top", offset:[0,-10]});
         marker.getElement().style.cursor='pointer';
-        marker.on('click', ()=> showModal(loc.concept, loc.desc, loc.link));
+        marker.on('click', ()=> showModal(loc.concept, loc.desc));
     });
 }

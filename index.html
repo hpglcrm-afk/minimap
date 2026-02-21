@@ -3,33 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Virginia Programming Map</title>
+<title>Virginia Programming Map Explorer</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+<!-- Start Screen -->
 <div id="startScreen">
-    <h1>Virginia Programming Mindmap</h1>
+    <h1>Virginia Programming Map</h1>
     <button id="enterBtn">Enter</button>
 </div>
+
+<!-- Map -->
 <div id="map"></div>
 
-<!-- Modal Overlay -->
+<!-- Modal -->
 <div id="modal" class="modal">
     <h2 id="modalTitle"></h2>
     <p id="modalDesc"></p>
-    <div id="gameArea" class="gameArea"></div>
+    <a id="viewMore" href="#" target="_blank">View More</a>
     <button id="closeBtn">Close</button>
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="utils.js"></script>
-<script src="concepts/events.js"></script>
-<script src="concepts/recursion.js"></script>
-<script src="concepts/concurrency.js"></script>
-<script src="concepts/loops.js"></script>
-<script src="concepts/variables.js"></script>
 <script src="map.js"></script>
 <script src="app.js"></script>
+
 </body>
 </html>
